@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- calculateTaxFormPage -->
+    <section class="taxCalculatorForm">
+      <div class="formInformation">
+        <!-- leftContent -->
+        <div class="tax-o-tron">
+          <div>
+            <header>Tax-o-tron</header>
+            <p>The free and simple online tax <br> calculator.</p>
+          </div>
+          <img src="/planetoid.svg" class="planetoid"></img>
+          <div class="moon"></div>
+        </div>
+        <!-- rightContent -->
+        <form>
+          <div>
+            <header>Calculate your tax</header>
+            <div class="reminder">
+              <img src="/warn.svg" alt="warn">
+              <p>Fields marked with * are mandatory</p>
+            </div>
+            <div class="countryResidence">
+              <p>Select your country of residence *</p>
+              <select>
+                <option>Australia</option>
+                <option>America</option>
+                <option>Canada</option>
+              </select>
+            </div>
+            <div class="incomeYear">
+              <p>Select an income year *</p>
+              <select>
+                <option>2022-2023</option>
+                <option>2021-2022</option>
+                <option>2023-2024</option>
+              </select>
+            </div>
+            <div class="totalIncome">
+              <p>Enter your total taxable income for the income year * </p>
+              <div><span id="dollar">$</span><input type="text" placeholder="Amount" ><span id="unit">.00</span></div>
+            </div>
+            <input class="calculate" type="submit" value="Calculate">
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- taxResultsPage -->
+    <section class="taxCalculatorResult">
+      <div class="card">
+        <!-- leftContent -->
+        <div class="taxResult">
+          <header>Your tax results</header>
+          <div class="countryResidence">
+            <p>Select your country of residence *</p>
+            <select>
+              <option>Australia</option>
+            </select>
+          </div>
+          <div class="incomeYear">
+            <p>Select an income year *</p>
+            <select>
+              <option>2022-2023</option>
+            </select>
+          </div>
+          <div class="totalIncome">
+            <p>Enter your total taxable income for the income year * </p>
+            <div><span id="dollar">$</span><input type="text" value="70,000" ><span id="unit">.00</span></div>
+          </div>
+          <span id="previousScreen">Go back to previous screen</span>
+        </div>
+        <!-- rightContent -->
+        <div class="taxableIncomeForm">
+          <div class="incomeResult">
+            <header>Your estimated taxable income is:</header>
+            <p>$13,217.00</p>
+          </div>
+          <div class="breakdown">
+            <header>Breakdown</header>
+            <div class="taxBracket">
+              <div>
+                <p><span class="bond">Tax Bracket</span><br>$0 - $18,200</p>
+                <span class="enlarge">$0</span> 
+              </div>
+              <div>
+                <p><span class="bond">Tax Bracket</span><br>$18,201 - $45,000</p>
+                <span class="enlarge">$5,092</span> 
+              </div>
+              <div>
+                <p><span class="bond">Tax Bracket</span><br>$45,001 - $120,000</p>
+                <span class="enlarge">$8,125</span>  
+              </div>
+              <div>
+                <p><span class="bond">Tax Bracket</span><br>$120,001 - $180,000</p>
+                <span class="enlarge">$0</span> 
+              </div>
+              <div>
+                <p><span class="bond">Tax Bracket</span><br>$180,000+</p>
+                <span class="enlarge">$0</span> 
+              </div>
+            </div>
+            </div>
+          <div class="planetoid">
+            <img src="/planetoid.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

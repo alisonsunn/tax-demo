@@ -1,0 +1,337 @@
+@mixin fontSize {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin formOptionSize {
+  width: 30rem;
+  height: 4rem;
+  flex-shrink: 0;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100dvw;
+  height: 100dvh;
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.taxCalculatorForm,
+.taxCalculatorResult {
+  box-sizing: border-box;
+  padding: 9.4rem 19.4rem;
+  width: 115.2rem;
+  height: 70rem;
+  background: #E7E7FF;
+  margin: 0 auto;
+}
+
+.formInformation,
+.card {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 4.8rem;
+  width: 76.4rem;
+  height: 51.2rem;
+  border-radius: 0.5rem;
+  background: #FFF;
+  box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.25);
+  padding: 3.2rem;
+
+  .tax-o-tron {
+    width: 32rem;
+    height: 44.8rem;
+    background-color: #8477C9;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 4px 0px #E7E7FF;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    header {
+      @include fontSize;
+      color: #FFF;
+      font-size: 4.8rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    p {
+      @include fontSize;
+      color: #FFF;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 0;
+      display: inline-block;
+    }
+
+    .planetoid {
+      width: 22rem;
+      height: 20.3636rem;
+      position: absolute;
+      top: 29rem;
+      right: 13rem;
+      z-index: 1;
+    }
+
+    .moon {
+      width: 3.6083rem;
+      height: 3.5174rem;
+      background: #E7E7FF;
+      border-radius: 50%;
+      filter: drop-shadow(-10px 13px 3px rgba(0, 0, 0, 0.15));
+      position: absolute;
+      top: 33rem;
+      left: 14.34rem;
+      z-index: 2;
+    }
+
+    div {
+      position: absolute;
+      top: 12.8rem;
+      left: 4.6rem;
+    }
+  }
+
+  form {
+    >div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      box-sizing: border-box;
+      padding: 1.6rem;
+    }
+    
+    header {
+      @include fontSize;
+      font-size: 3.2rem;
+      font-weight: 600;
+    }
+
+    .reminder {
+      display: flex;
+      align-items: center;
+      @include formOptionSize;
+      @include fontSize;
+      border-radius: 0.5rem;
+      border: 2px solid #8477C9;
+      background: #FFF;
+      box-shadow: 0px 4px 8px 0px #E7E7FF;
+      font-size: 1.2rem;
+      color: #8477C9;
+      font-weight: 700;
+    
+    img {
+      width: 2.4272rem;
+      height: 2.5rem;
+      flex-shrink: 0;
+      margin-left: 0.97rem;
+    }
+
+    >p {
+      color: #8477C9;
+      margin: 0;
+      padding-left: 0.97rem;
+    }
+  } 
+  
+  p {
+    @include fontSize;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0;
+  }
+}
+
+  .countryResidence,
+  .incomeYear,
+  .totalIncome {
+    @include fontSize;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .countryResidence,
+  .incomeYear,
+  .taxResult {
+    select {
+      @include formOptionSize;
+      @include fontSize;
+      padding-left: 1.37rem;
+      appearance: none;
+      background: url(/arrow.svg) no-repeat right 1.7rem center;
+      border-radius: 0.5rem;
+      border: 1px solid #A4A4A4;
+    }
+  }
+
+  .totalIncome div {
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    border: 1px solid #A4A4A4;
+    width: 30rem;
+    height: 4rem;
+    padding: 1.1rem 1.37rem;
+    position: relative;
+    font-size: 1.4rem;
+    
+    input {
+      border: none;
+      outline: none; 
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    #dollar {
+      margin-right: 0.88rem;
+      font-size: 1.6rem;
+    }
+
+    #unit {
+      position: absolute;
+      right: 1.27rem;
+    }
+  }
+
+  .calculate {
+    @include fontSize;
+    @include formOptionSize;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    height: 4.3rem;
+    border-radius: 0.5rem;
+    background: #8477C9;
+    box-shadow: 0px 4px 8px 0px #E7E7FF;
+    border: none;
+    padding: 0.9rem 11.2rem 1.5rem 12.2rem;
+  }
+
+  .taxResult {
+    @include fontSize;
+    box-sizing: border-box;
+    font-size: 3.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 1.6rem;
+
+    header {
+      display: inline-block;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    select,
+    .totalIncome div,
+    .totalIncome input {
+      background-color: #E4E4E4;
+      color: #848484;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    #previousScreen {
+      @include fontSize;
+      color: #8477C9;
+      font-weight: 600;
+      text-decoration-line: underline;
+    }
+  }
+
+  .taxableIncomeForm {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2.2rem 2.1rem;
+    width: 32rem;
+    height: 44.8rem;
+    flex-shrink: 0;
+    background-color: #8477C9;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 4px 0px #E7E7FF;
+
+    .planetoid {
+      position: absolute;
+      top: 29rem;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      @include fontSize;
+      color: #FFF;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .incomeResult p {
+      box-sizing: border-box;
+      width: 28rem;
+      height: 7rem;
+      flex-shrink: 0;
+      margin: 0;
+      margin-top: 0.8rem;
+      @include fontSize;
+      color: #8477C9;
+      font-size: 3.6rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      background: #FFF;
+      padding: 1.3rem 4.03rem 1.4rem 5.34rem;
+    }
+
+    .breakdown {
+      margin-top: 1.6rem;
+
+      .taxBracket {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 1rem 1.5rem 1rem 1.4rem;
+          background-color: #FFF;
+          width: 27.8rem;
+          height: 4.8rem;
+  
+          p {
+            margin: 0;
+          }
+  
+          .bond {
+            font-weight: 700;
+          }
+  
+          .enlarge {
+            font-size: 1.8rem;
+            color: #8477C9;
+            font-weight: 600;
+          }
+        }
+      }
+      
+    }
+  }
+}
